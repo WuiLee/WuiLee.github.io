@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wui Lee | Portfolio</title>
+  <meta name="description" content="Wui Lee, software developer working on games, mobile apps and distributed systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="profile">
+      <!-- Replace with <img src="photo.jpg" alt="Wui Lee"> when you have a photo -->
+      <div class="avatar" aria-hidden="true">WL</div>
+      <h1 class="name">Wui Lee</h1>
+      <p class="role">Software Developer</p>
+      <p class="status"><span class="dot"></span> Open to opportunities</p>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+
+    <nav class="nav" id="nav">
+      <a href="#about" class="active">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="socials">
+      <a href="https://github.com/WuiLee" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a href="#contact" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M2 5h20v14H2V5Zm2 2v.5l8 5 8-5V7H4Zm16 2.8-8 5-8-5V17h16V9.8Z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="content">
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <p class="eyebrow">About</p>
+      <h2 class="headline">I build games, apps and systems that are <em>a pleasure to use.</em></h2>
+      <p class="lead">
+        I'm a software developer with a background in computer science. I enjoy turning ideas into
+        working products, from browser games and Unity multiplayer projects to Android apps and
+        distributed back-ends. I care about clean code, small details, and the feeling a user gets
+        the first time they try something I made.
+      </p>
+      <div class="skills">
+        <span>JavaScript</span><span>HTML &amp; CSS</span><span>C# / Unity</span><span>Java / Android</span>
+        <span>Python</span><span>Akka</span><span>Photon PUN</span><span>Git</span>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <p class="eyebrow">Resume</p>
+      <h2 class="title">Education</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">2021</span>
+          <div>
+            <h3>B.Sc. Computer Science <span class="at">@ University</span></h3>
+            <p>Capstone: QuizMap, published as a conference paper. Coursework in distributed systems, AI and data science.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <p class="eyebrow">Projects</p>
+      <h2 class="title">Selected work</h2>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="games">Games</button>
+        <button class="chip" data-filter="apps">Apps</button>
+        <button class="chip" data-filter="research">Research</button>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-tags="games">
+          <div class="thumb t1"><span>★</span></div>
+          <div class="card-body">
+            <h3>Star Catcher</h3>
+            <p>Arcade browser game with power-ups and sound effects, later ported to Unity.</p>
+            <div class="tags"><span>JavaScript</span><span>Unity</span></div>
+            <a class="link" href="star-catcher.html">Play it →</a>
+          </div>
+        </article>
+
+        <article class="card" data-tags="games">
+          <div class="thumb t2"><span>◎</span></div>
+          <div class="card-body">
+            <h3>Multiplayer Unity Game</h3>
+            <p>Real-time networked game built in Unity using Photon for matchmaking and sync.</p>
+            <div class="tags"><span>C#</span><span>Unity</span><span>Photon</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="apps">
+          <div class="thumb t3"><span>✉</span></div>
+          <div class="card-body">
+            <h3>ChatApp</h3>
+            <p>Android messaging app with real-time conversations and a clean, simple UI.</p>
+            <div class="tags"><span>Java</span><span>Android</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="research">
+          <div class="thumb t4"><span>⌖</span></div>
+          <div class="card-body">
+            <h3>QuizMap</h3>
+            <p>Capstone project on location-based quizzes, written up as a conference paper.</p>
+            <div class="tags"><span>Research</span><span>Mobile</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="research">
+          <div class="thumb t5"><span>⇄</span></div>
+          <div class="card-body">
+            <h3>Distributed Systems with Akka</h3>
+            <p>Actor-based distributed system built around fault tolerance and message passing.</p>
+            <div class="tags"><span>Scala / Java</span><span>Akka</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="games">
+          <div class="thumb t6"><span>≈</span></div>
+          <div class="card-body">
+            <h3>Snake</h3>
+            <p>Lightweight take on the classic snake mechanic, playable in any browser.</p>
+            <div class="tags"><span>JavaScript</span><span>Canvas</span></div>
+            <a class="link" href="snake-game/index.html">Play it →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <p class="eyebrow">Contact</p>
+      <h2 class="title">Let's work together</h2>
+      <p class="lead">Have a role, a project, or just want to say hi? Send me a message.</p>
+
+      <form class="form" id="contactForm">
+        <div class="row">
+          <label>Name<input name="name" required autocomplete="name"></label>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        </div>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Wui Lee · Built from scratch with HTML, CSS &amp; JS</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
